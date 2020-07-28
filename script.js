@@ -18,12 +18,18 @@ let appData = {
     savings :false
 
 }
-let moneyMust1  = prompt("Введите обязательную статью расходов в этом месяце") ;
-let moneyMust2  = prompt("Во сколько обойдется?") ;
-let moneyMust3  = prompt("Введите обязательную статью расходов в этом месяце") ;
-let moneyMust4  = prompt("Во сколько обойдется?") ;
 
-appData.expenses.moneyMust1 = moneyMust2;
-appData.expenses.moneyMust3 = moneyMust4;
 
+for (let i = 0; i < 2; i++ ) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце") ;
+    let b = prompt("Во сколько обойдется?") ;
+    
+    if ( (typeof(a) ) === 'string' && (typeof(a)) != null && (typeof(b)) != null 
+        && a!= '' && b != '' && a.length <50) {
+        console.log('done');
+        appData.expenses[a] = b;
+    } else {
+
+    }
+}
 alert(appData.budget/30);
